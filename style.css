@@ -1,0 +1,326 @@
+html{
+    font-size: 62.5%;;
+}
+body{
+    box-sizing: border-box;
+    background-color: #000;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.nav{
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 9rem;
+
+}
+.logo{
+    display: flex;
+    align-items: center;
+    
+}
+.logo .image{
+    width: 5.7rem;
+}
+.logo button{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+    background-color: #48413E;
+    color: white;
+    border: none;
+    padding:.6rem .8rem;
+    border-radius: .5rem;
+    font-size: 1rem;
+    
+}
+.logo .delivery-img{
+    width: fit-content;
+    letter-spacing: -0.5px;
+}
+.logo .delivery-img img{
+    width: 2.1rem;
+    padding-right: .8rem;
+}
+.logo button h4{
+    margin: 0;
+}
+.sign-in{
+    display: flex;
+    align-items: center;
+}
+
+.sign-in :first-child{
+    display: flex;
+    align-items: center;
+}
+.sign-in button{
+    margin: 1rem;
+}
+.sign-in button h5{
+    margin: 0;
+}
+.location i{
+    font-size:2rem;
+    margin-left: 1rem;
+    color: #E4002B;
+}
+.fa-location-crosshairs:before, .fa-location:before {
+    content: "\f601";
+    margin-right: 1rem;
+}
+.location i:last-child{
+    font-size:1.3rem;
+    color: white;
+}
+.location{
+    background-color: #1C1816;
+    color: white;
+    padding: .8rem ;
+    border-radius: 2rem;
+}
+.bucket{
+    border: 2px solid white;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem 2rem;
+} 
+.bucket h5{
+    text-align: center;
+    align-items: center;
+}
+.btn1 {
+    background-color: #E4002B;
+    color: white;
+    border: none;
+    padding: .6rem 1.2rem;
+    border-radius: .4rem;
+    font-size: 1.6rem;
+}
+.btn1:hover{
+    background-color: #f61e46;
+    cursor: pointer;
+}
+.buttons-flex{
+    display: flex;
+    justify-content: center;
+}
+.buttons-flex .btn1{
+    margin:2.5rem .3rem;
+    margin-bottom:3.5rem;
+    width: 14rem;
+    padding: 1.2rem .5rem;
+    font-size: 1.4rem;
+}
+
+
+
+
+.catergories{
+    margin-top: 5rem;
+}
+
+.catergories-images{
+    display: flex;
+    justify-content: center;
+}
+.catergories-images img{
+    width: 13rem;
+    margin-top: 5rem;
+    padding: .7rem;
+    cursor: pointer;
+}
+
+
+.heading::before{
+    top: 49%;
+    width: 100%;
+    height: 2px;
+    content: '';
+    z-index: -1;
+    position: absolute;
+    background-color: #3F3F3F;
+}
+.heading {
+    
+    position: relative;
+    /* margin-top: 5rem; */
+}
+
+.heading h1{
+        color: #D4D4D4;
+        display: inline-block;
+        font-size: 2rem;
+        font-weight: bold;
+        background: #000;
+        padding-right: 14px;
+}
+
+
+/* Home Page */
+.home-page{
+    margin-top: 5rem;
+}
+
+.top-selling
+{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%; 
+    align-items: start;
+}
+
+
+
+
+/* main */
+main{
+    padding: 0 9rem;
+
+}
+
+
+
+
+/* card */
+.everydayValue-Cards{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%; 
+    align-items: start;
+}
+
+
+.card{
+    width: 23.5rem;
+    background-color: #221717;
+    border: 1.5rem solid #221717;
+    border-top: 2rem solid #221717;
+    border-radius: 1rem;
+    margin-top: 3rem;
+    display:flex;
+    flex-direction: column;
+}
+.card__image-wrap img{
+    width: 100%;
+    align-items: center;
+    display: inline-block;
+    justify-content: center;
+
+}
+.card__text {
+    color: white;
+    width: 21rem;
+
+}
+.card__text h1 {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+.card__text p {
+    font-size: 1.2rem;
+    height: 5rem;
+    text-align: start;
+}
+.price-bucket-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    align-items: baseline;
+    width: 21rem;
+
+}
+
+.price-bucket-wrap span{
+    font-size: 2rem;
+    font-weight: bold;
+}
+ .price-bucket-wrap button{
+    font-size: 1.4rem;
+ }
+/* align cards */
+
+
+
+
+
+.icons-wrap{
+    align-items: center;
+    display: flex;
+    padding-top: 5rem;
+    justify-content: center;
+}
+.icons{
+    color: white;
+    border-left: 2px solid white;
+    margin: 2rem;
+
+}
+.icons i{
+    color: white;
+    margin: 1.2rem;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+.icons :first-child{
+    color: red;
+}
+.icons :last-child{
+    color: rgba(0, 119, 255, 0.621);
+}
+.info{
+    color: white;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 20rem 20rem 20rem;
+    row-gap: 2rem;
+    column-gap: 5rem;
+}
+
+.grid ul li{
+    list-style: none;
+    margin: 2rem;
+    font-size: 1.3rem;
+}
+.images img{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-left: 10rem;
+}
+
+
+/* footer */
+
+
+.footer{
+    background-color: #1C1816;
+    margin: 0;
+    padding: 0;
+    margin-top: 10rem;
+}
+
+/* #bucket{
+    border-bottom: 50px solid white;
+	border-left: 5px solid black;
+	border-right: 5px solid black;
+    text-align: center;
+    align-items: center;
+	height: 1rem;
+	width: 35px;
+    padding: 0;
+}
+#bucket h5{
+    text-align: center;
+    align-items: center;
+    font-size: 2rem;
+} */
+#bucket{
+    padding: 1rem 2rem;
+    border-left: 5px solid black;
+    border-bottom: 10px solid rgb(191, 187, 187);
+	border-right: 5px solid black;
+}

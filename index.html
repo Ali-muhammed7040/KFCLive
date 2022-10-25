@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KFC | KFC Deals | KFC Menu</title>
+    <link
+      rel="shortcut icon"
+      href="./images/KFC-Logo-Red.png"
+      type="image/x-icon"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"/>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="logo">
+        <img class="image" src="./images/KFC-Logo-Red.png" alt="" />
+        <button class="delivery-img">
+          <img  src="./images/1.png" alt="" />
+          <h4>START AN ORDER FOR DELIVERY</h4>
+        </button>
+      </div>
+      <div class="sign-in">
+        <button class="location" onclick="getLocation()">
+            <i class="fa-solid fa-location-crosshairs"></i>
+            <h5 id="demo">Select Location</h5>
+            <i class="fa-solid fa-caret-down"></i>
+        </button>
+        <button class="MuiButtonBase-root jss10 false" tabindex="0" type="button" data-testid="btn" id="bucket"><h5 id="write" class="MuiTypography-root MuiTypography-h5">0</h5><span class="MuiTouchRipple-root"></span></button>
+        <a href="https://www.kfcpakistan.com/login" style="color:white;text-decoration: none;"><button class="btn1 register"><h5>Register / sign in</h5></button></a>
+      </div>
+      
+    </nav>
+    <main>
+        <div class="home-page">
+            <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner" data-interval="500">
+                    <div class="carousel-item active">
+                      <img src="./images/corousel1.png" alt="Los Angeles" class="d-block" style="width:100%">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./images/corousel2.png" alt="Chicago" class="d-block" style="width:100%">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="./images/corousel3.png" alt="New York" class="d-block" style="width:100%">
+                    </div>
+                  </div>
+            </div>
+            
+              <div id="browseCatergory">
+                <div class="catergories" >
+                    <div class="heading">
+                        <h1>Browse Categories</h1>
+                    </div>
+                </div>
+                <div class="catergories-images">
+                    <a id="everydayValue" onclick="showCategories()"><img src="./images/cat-everyday.png" alt=""></a>
+                    <a id="alaCarte" onclick="showalaCarteCategories()"><img src="./images/cat-ala-carte.png" alt=""></a>
+                    <a id="signatureBoxes" onclick="signatureCategories()"><img src="./images/cat-signature-boxes.png" alt=""></a>
+                    <a id="sharing" onclick="sharingCategories()"><img src="./images/cat-sharing.png" alt=""></a>
+                    <a id="snacks" onclick="snacksCategories()"><img src="./images/cat-snacks.png" alt=""></a>
+                    <a id="midnight" onclick="midnightCategories()"><img src="./images/cat-midnight.png" alt=""></a>
+                </div>
+    
+                <div class="catergories">
+                    <div class="heading">
+                        <h1>Snacks & Beverages </h1>
+                    </div>
+                </div>
+                <div class="top-selling">
+                    <div class="card">
+                        <div class="card__image-wrap">
+                            <img src="./images/snacks1.png" alt="">
+                        </div>
+                        <div class="card__text">
+                            <h1>1 Pc Chicken </h1>
+                            <p>1 piece of Hot & Crispy Fried Chicken</p>
+                            <div class="price-bucket-wrap">
+                                <span>Rs 220</span>
+                                <button class="btn1">Add to bucket</button>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="card">
+                        <div class="card__image-wrap">
+                            <img src="./images/snacks2.png" alt="">
+                        </div>
+                        <div class="card__text">
+                            <h1>HotShots</h1>
+                            <p>9 Pcs of hand-breaded Hot Shots</p>
+                            <div class="price-bucket-wrap">
+                                <span>Rs 320</span>
+                                <button class="btn1">Add to bucket</button>
+                            </div>
+                        </div>
+                    </div>   
+                    
+                    <div class="card">
+                        <div class="card__image-wrap">
+                            <img src="./images/snacks3.png" alt="">
+                        </div>
+                        <div class="card__text">
+                            <h1>Family Festival 2</h1>
+                            <p>  A hearty meal for spy Chicken + 2 dinner rolls + 1.5 Ltr drink</p>
+                            <div class="price-bucket-wrap">
+                                <span>Rs 1890</span>
+                                <button class="btn1">Add to bucket</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    
+    
+    
+                    <div class="card">
+                        <div class="card__image-wrap">
+                            <img src="./images/krunchburger&drink.png" alt="">
+                        </div>
+                        <div class="card__text">
+                            <h1> Family Festival 3</h1>
+                            <p>An ultimate meal for the fam. It includes 4 Zinger burgers + 4 pieces Hot and Crispy Chicken + 2 dinner rolls + 1.5 Ltr drink</p>
+                            <div class="price-bucket-wrap">
+                                <span>Rs 2090</span>
+                                <button class="btn1">Add to bucket</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- categories Container -->
+        <div class="categories" id="categoriesCardsContainer" style="display: none;">
+            <section class="buttons-flex" id="button1" style="display: none;">
+                <button class="btn1" onclick="showCategories()">Everyday Value</button>
+                <button  class="btn1" onclick="showalaCarteCategories()">Ala Carte & Combos</button>
+                <button class="btn1" onclick="signatureCategories()">Signature Boxes</button>
+                <button class="btn1" onclick="sharingCategories()">Sharing</button>
+                <button class="btn1" onclick="snacksCategories()">Snacks & Beverages</button>
+                <button class="btn1" onclick="midnightCategories()">Midnight</button>
+               
+            </section>
+            <div class="heading">
+                <h1>Everyday Value</h1>
+            </div>
+    
+            <section class="everydayValue-Cards">
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/everyday1.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1>Krunch Burger</h1>
+                        <p>Crunchy chicken fillet, spicy mayo, lettuce, sandwiched between a sesame seed bun</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 220</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/Rice&spice.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1>Rice N Spice</h1>
+                        <p>Spiced, buttery rice with 6 pcs of Hot Shots topped with our signature Vietnamese sauce</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 290</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/zingeratha.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1>Zingeratha</h1>
+                        <p>Crispy chicken, sliced onions, tangy imli chutney, mint mayo, wrapped in a soft paratha</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 290</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/krunchburger&drink.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1> Krunch Burger + Drink</h1>
+                        <p>1 Krunch burger + 1 regular drink</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 300</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/krunchwithfries&drink.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1>Krunch With Fries N Drink</h1>
+                        <p>Krunch + 1 regular Fries + 1 regular Drink</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 430</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/chicken&chips.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1>Chicken N Chips</h1>
+                        <p>2 pieces of Hot and Crispy Fried Chicken+ fries+ dinner roll+ signature Vietnamese Sauce</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 440</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+
+                        </div>
+                    </div>
+                </div>
+    
+    
+    
+    
+    
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/krunchchickenCombo.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1>Krunch Chicken Combo</h1>
+                        <p>1 Krunch burger + 1 pc of Hot and Crispy Fried Chicken + 1 regular drink</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 460</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/3pcs chicken.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1>3 Pcs Chicken</h1>
+                        <p>3 pieces of Hot and Crispy Fried Chicken</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 470</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div> 
+
+
+        <div class="categories" id="alacateCardsContainer" style="display: none;">
+            <section class="buttons-flex" id="button2" style="display: none;">
+                <button class="btn1" onclick="showCategories()">Everyday Value</button>
+                <button class="btn1" onclick="showalaCarteCategories()">Ala Carte & Combos</button>
+                <button class="btn1" onclick="signatureCategories()">Signature Boxes</button>
+                <button class="btn1" onclick="sharingCategories()">Sharing</button>
+                <button class="btn1" onclick="snacksCategories()">Snacks & Beverages</button>
+                <button class="btn1" onclick="midnightCategories()">Midnight</button>
+               
+            </section>
+            <div class="heading">
+                <h1>Ala Carte & Combos</h1>
+            </div>
+    
+            <section class="everydayValue-Cards">
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/alacarte1.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1>Twister</h1>
+                        <p>Tender chicken strips, black pepper mayo, diced tomatoes and lettuce- wrapped in a tortilla</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 360</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/alacarte2.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1>Zinger Burger</h1>
+                        <p>A portrait of our hero- crispy Zinger fillet, signature mayo and lettuce- sandwiched between a sesame seed bun</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 500</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/alacarte3.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1>Kentucky Burger</h1>
+                        <p>COG Zinger fillet layered with beef pepperoni, crispy fried onions, cheese and smokey BBQ sauce</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 530</span>
+                           <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/alacarte4.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1> Krunch Burger + Drink</h1>
+                        <p>1 Krunch burger + 1 regular drink</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 300</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/alcarte6.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1>Twister Combo</h1>
+                        <p>Twister + 1 Regular fries+ 1 Regular drink</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 570</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/krunchburger&drink.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1> Midnight Deal 3</h1>
+                        <p>Mighty Zinger + regular drink</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 590</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div> 
+
+
+        <div class="categories" id="sinatureCardsContainer" style="display: none;">
+            <section class="buttons-flex" id="button3" style="display: none;">
+                <button class="btn1" onclick="showCategories()">Everyday Value</button>
+                <button class="btn1" onclick="showalaCarteCategories()">Ala Carte & Combos</button>
+                <button class="btn1" onclick="signatureCategories()">Signature Boxes</button>
+                <button class="btn1" onclick="sharingCategories()">Sharing</button>
+                <button class="btn1" onclick="snacksCategories()">Snacks & Beverages</button>
+                <button class="btn1" onclick="midnightCategories()">Midnight</button>
+               
+            </section>
+            <div class="heading">
+                <h1>Signature Boxes</h1>
+            </div>
+    
+            <section class="everydayValue-Cards">
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/signature1.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1>Crispy Box</h1>
+                        <p>In mood for something crispy? Get 2 pcs Hot & Crispy Chicken + 1 regular fries + 1 regular drink + 1 coleslaw</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 540</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/signature2.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1>Boneless Meal Box</h1>
+                        <p>Hassle free boneless experience with 4 chicken strips + 1 coleslaw + 1 regular fries + 1 drink + 1 dip + 1 dinner roll</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 580</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/signature3.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1>Wow Meal Box </h1>
+                        <p>Feel good with 1 signature Zinger + 1 pc Hot & Crispy Chicken + 1 regular fries + 1 drink + 1 fresh coleslaw</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 810</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/signature4.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1> Crispy Duo Box</h1>
+                        <p>Turn up the fun with 5 pcs Hot & Crispy Chicken + 1 large fries + 2 drinks</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 1020</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/signature5.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1>Xtreme Duo Box</h1>
+                        <p>The irresistible combo of 2 signature Zingers + 2 pcs Hot & Crispy Chicken + 1 large fries + 2 drinks</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 1270</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div> 
+        
+        <div class="categories" id="sharingCardsContainer" style="display: none;">
+            <section class="buttons-flex" id="button4" style="display: none;">
+                <button class="btn1" onclick="showCategories()">Everyday Value</button>
+                <button class="btn1" onclick="showalaCarteCategories()">Ala Carte & Combos</button>
+                <button class="btn1" onclick="signatureCategories()">Signature Boxes</button>
+                <button class="btn1" onclick="sharingCategories()">Sharing</button>
+                <button class="btn1" onclick="snacksCategories()">Snacks & Beverages</button>
+                <button class="btn1" onclick="midnightCategories()">Midnight</button>
+               
+            </section>
+            <div class="heading">
+                <h1>Sharing Boxes</h1>
+            </div>
+    
+            <section class="everydayValue-Cards">
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/sharing1.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1>Crispy Box</h1>
+                        <p>In mood for something crispy? Get 2 pcs Hot & Crispy Chicken + 1 regular fries + 1 regular drink + 1 coleslaw</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 540</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/sharing2.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1>Boneless Meal Box</h1>
+                        <p>Hassle free boneless experience with 4 chicken strips + 1 coleslaw + 1 regular fries + 1 drink + 1 dip + 1 dinner roll</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 580</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/sharing3.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1>Wow Meal Box </h1>
+                        <p>Feel good with 1 signature Zinger + 1 pc Hot & Crispy Chicken + 1 regular fries + 1 drink + 1 fresh coleslaw</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 810</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/signature4.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1> Crispy Duo Box</h1>
+                        <p>Turn up the fun with 5 pcs Hot & Crispy Chicken + 1 large fries + 2 drinks</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 1020</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/sharing4.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1>Xtreme Duo Box</h1>
+                        <p>The irresistible combo of 2 signature Zingers + 2 pcs Hot & Crispy Chicken + 1 large fries + 2 drinks</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 1270</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div> 
+        <div class="categories" id="snacksCardsContainer" style="display: none;">
+            <section class="buttons-flex" id="button5" style="display: none;">
+                <button class="btn1" onclick="showCategories()">Everyday Value</button>
+                <button class="btn1" onclick="showalaCarteCategories()">Ala Carte & Combos</button>
+                <button class="btn1" onclick="signatureCategories()">Signature Boxes</button>
+                <button class="btn1" onclick="sharingCategories()">Sharing</button>
+                <button class="btn1" onclick="snacksCategories()">Snacks & Beverages</button>
+                <button class="btn1" onclick="midnightCategories()">Midnight</button>
+               
+            </section>
+            <div class="heading">
+                <h1>Snacks & Beverages</h1>
+            </div>
+    
+            <section class="everydayValue-Cards">
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/snacks1.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1>Crispy Box</h1>
+                        <p>In mood for something crispy? Get 2 pcs Hot & Crispy Chicken + 1 regular fries + 1 regular drink + 1 coleslaw</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 540</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/snacks2.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1>Boneless Meal Box</h1>
+                        <p>Hassle free boneless experience with 4 chicken strips + 1 coleslaw + 1 regular fries + 1 drink + 1 dip + 1 dinner roll</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 580</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/snacks3.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1>Wow Meal Box </h1>
+                        <p>Feel good with 1 signature Zinger + 1 pc Hot & Crispy Chicken + 1 regular fries + 1 drink + 1 fresh coleslaw</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 810</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/snacks4.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1> Crispy Duo Box</h1>
+                        <p>Turn up the fun with 5 pcs Hot & Crispy Chicken + 1 large fries + 2 drinks</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 1020</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/snacks5.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1> Crispy Duo Box</h1>
+                        <p>Turn up the fun with 5 pcs Hot & Crispy Chicken + 1 large fries + 2 drinks</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 1020</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/snacks6.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1> Crispy Duo Box</h1>
+                        <p>Turn up the fun with 5 pcs Hot & Crispy Chicken + 1 large fries + 2 drinks</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 1020</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/drink1.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1> Crispy Duo Box</h1>
+                        <p>Turn up the fun with 5 pcs Hot & Crispy Chicken + 1 large fries + 2 drinks</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 1020</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/drink2.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1> Crispy Duo Box</h1>
+                        <p>Turn up the fun with 5 pcs Hot & Crispy Chicken + 1 large fries + 2 drinks</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 1020</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/drink3.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1> Crispy Duo Box</h1>
+                        <p>Turn up the fun with 5 pcs Hot & Crispy Chicken + 1 large fries + 2 drinks</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 1020</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/drink4.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1> Crispy Duo Box</h1>
+                        <p>Turn up the fun with 5 pcs Hot & Crispy Chicken + 1 large fries + 2 drinks</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 1020</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/drink5.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1>Xtreme Duo Box</h1>
+                        <p>The irresistible combo of 2 signature Zingers + 2 pcs Hot & Crispy Chicken + 1 large fries + 2 drinks</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 1270</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div> 
+        <div class="categories" id="midnightCardsContainer" style="display: none;">
+            <section class="buttons-flex" id="button6" style="display: none;">
+                <button class="btn1" onclick="showCategories()">Everyday Value</button>
+                <button class="btn1" onclick="showalaCarteCategories()">Ala Carte & Combos</button>
+                <button class="btn1" onclick="signatureCategories()">Signature Boxes</button>
+                <button class="btn1" onclick="sharingCategories()">Sharing</button>
+                <button class="btn1" onclick="snacksCategories()">Snacks & Beverages</button>
+                <button class="btn1" onclick="midnightCategories()">Midnight</button>
+               
+            </section>
+            <div class="heading">
+                <h1>Midnight* STARTS 12:00 AM</h1>
+            </div>
+    
+            <section class="everydayValue-Cards">
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/signature1.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1>Crispy Box</h1>
+                        <p>In mood for something crispy? Get 2 pcs Hot & Crispy Chicken + 1 regular fries + 1 regular drink + 1 coleslaw</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 540</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/signature2.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1>Boneless Meal Box</h1>
+                        <p>Hassle free boneless experience with 4 chicken strips + 1 coleslaw + 1 regular fries + 1 drink + 1 dip + 1 dinner roll</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 580</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/signature3.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1>Wow Meal Box </h1>
+                        <p>Feel good with 1 signature Zinger + 1 pc Hot & Crispy Chicken + 1 regular fries + 1 drink + 1 fresh coleslaw</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 810</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+    
+    
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/signature4.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1> Crispy Duo Box</h1>
+                        <p>Turn up the fun with 5 pcs Hot & Crispy Chicken + 1 large fries + 2 drinks</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 1020</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <div class="card__image-wrap">
+                        <img src="./images/signature5.png" alt="">
+                    </div>
+                    <div class="card__text">
+                        <h1>Xtreme Duo Box</h1>
+                        <p>The irresistible combo of 2 signature Zingers + 2 pcs Hot & Crispy Chicken + 1 large fries + 2 drinks</p>
+                        <div class="price-bucket-wrap">
+                            <span>Rs 1270</span>
+                            <button class="btn1" id="addBucket" onclick="addbuck()">Add to bucket</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div> 
+
+
+        
+
+    </main>
+    <footer class="footer">
+        <div class="icons-wrap">
+            <img src="./images/KFC-Logo-Red.png" alt="">
+            <div class="icons">
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+        </div>
+        <div class="info">
+            <div style="display: flex;">
+               <div class="grid">
+                <ul>
+                    <li>Information</li>
+                    <li>About Us</li>
+                    <li>Mitao bhook</li>
+                    <li>Privacy Policy</li>
+                    <li>Careers</li>
+                </ul>
+                <ul>
+                    <li>Locations</li>
+                    <li>Contact Us  </li>
+                </ul>
+                <ul>
+                    <li>Get in Touch</li>
+                    <li>Terms and Condition</li>
+                </ul>
+               </div>
+                
+                    <div class="images">
+                        <img src="./images/app-store.png" alt="">
+                         <img src="./images/google-store.png" alt="">
+                    </div>
+                
+               
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
